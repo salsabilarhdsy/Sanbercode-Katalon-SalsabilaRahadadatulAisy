@@ -17,3 +17,31 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+def randomNumber = org.apache.commons.lang.RandomStringUtils.randomNumeric(5)
+
+def username = 'salsabila'
+
+def random_usn = username + randomNumber
+
+println(random_usn)
+
+WebUI.openBrowser(GlobalVariable.web_url)
+
+WebUI.setViewPortSize(GlobalVariable.width, GlobalVariable.height)
+
+WebUI.click(findTestObject('TC_Register/menu_Sign up'))
+
+WebUI.setText(findTestObject('TC_Register/input_Username'), random_usn)
+
+WebUI.setEncryptedText(findTestObject('TC_Register/input_Password'), 'sUKugCyjtpx16cGSCMyJzX09M3+gFM+z')
+
+WebUI.click(findTestObject('TC_Register/button_Sign up'))
+
+WebUI.waitForAlert(5)
+
+alert_register = WebUI.getAlertText(FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyEqual(alert_register, 'Sign up successful.')
+
+WebUI.closeBrowser()
+
