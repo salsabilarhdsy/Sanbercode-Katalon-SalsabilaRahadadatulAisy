@@ -29,7 +29,7 @@ WebUI.setEncryptedText(findTestObject('TC_Login/input_Password'), 'RigbBhfdqOBGN
 
 WebUI.click(findTestObject('TC_Login/button_Log in'))
 
-WebUI.waitForElementPresent(findTestObject('TC_Login/verify_Welcome salsabilasy'), 5)
+WebUI.waitForElementPresent(findTestObject('TC_Login/verify_Welcome salsabilasy'), 10)
 
 WebUI.verifyElementText(findTestObject('TC_Login/verify_Welcome salsabilasy'), 'Welcome salsabilasy')
 

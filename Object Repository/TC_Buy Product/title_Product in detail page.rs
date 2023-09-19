@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>title_Detail page (Samsung galaxy s6)</name>
+   <name>title_Product in detail page</name>
    <tag></tag>
    <elementGuidId>c5f1a504-4fab-4c74-b8e8-a8e844b721c8</elementGuidId>
    <selectorCollection>

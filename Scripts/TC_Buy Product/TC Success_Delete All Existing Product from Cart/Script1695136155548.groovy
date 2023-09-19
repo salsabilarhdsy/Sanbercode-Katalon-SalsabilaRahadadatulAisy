@@ -17,3 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.callTestCase(findTestCase('TC_Login/Block_TC Success_Login'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('TC_Buy Product/menu_Cart'))
+
+int n = 1
+
+for (int i = 1; i <= n; i++) {
+    WebUI.waitForPageLoad(10)
+    if (WebUI.verifyElementPresent(findTestObject('TC_Buy Product/card_Product in Cart'), 5, FailureHandling.OPTIONAL)) {
+        WebUI.click(findTestObject('TC_Buy Product/button_Delete'))
+        n += 1
+    } else {
+        WebUI.closeBrowser()
+    }
+}
+

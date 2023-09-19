@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>card_Samsung galaxy s6</name>
+   <name>card_Product in homepage</name>
    <tag></tag>
    <elementGuidId>2a4f2a74-6b8e-491a-a5cc-571ff89c9d5d</elementGuidId>
    <selectorCollection>

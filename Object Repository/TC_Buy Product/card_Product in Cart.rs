@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>card_Cart (samsung galaxy s6)</name>
+   <name>card_Product in cart</name>
    <tag></tag>
    <elementGuidId>85672474-12b7-429d-8d83-19e3d3ff7e9a</elementGuidId>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
-         <value>//tbody[@id='tbodyid']/tr[1]/td[2]</value>
+         <value>//tbody[@id='tbodyid']/tr/td[2]</value>
       </entry>
       <entry>
          <key>BASIC</key>
