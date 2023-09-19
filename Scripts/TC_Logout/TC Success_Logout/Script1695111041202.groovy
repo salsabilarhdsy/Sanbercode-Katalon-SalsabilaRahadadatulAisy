@@ -19,19 +19,9 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.callTestCase(findTestCase('TC_Login/Block_TC Success_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.click(findTestObject('TC_Buy Product/card_Samsung galaxy s6'))
+WebUI.click(findTestObject('TC_Logout/menu_Log out'))
 
-product_title = WebUI.getText(findTestObject('TC_Buy Product/title_Detail page (Samsung galaxy s6)'))
-
-WebUI.click(findTestObject('TC_Buy Product/title_Detail page (Samsung galaxy s6)'))
-
-WebUI.click(findTestObject('TC_Buy Product/button_Add to cart'))
-
-WebUI.click(findTestObject('TC_Buy Product/menu_Cart'))
-
-WebUI.waitForElementPresent(findTestObject('TC_Buy Product/card_Cart (samsung galaxy s6)'), 5)
-
-WebUI.verifyElementText(findTestObject('TC_Buy Product/card_Cart (samsung galaxy s6)'), product_title)
+WebUI.verifyElementPresent(findTestObject('TC_Logout/menu_Log in'), 0)
 
 WebUI.closeBrowser()
 
