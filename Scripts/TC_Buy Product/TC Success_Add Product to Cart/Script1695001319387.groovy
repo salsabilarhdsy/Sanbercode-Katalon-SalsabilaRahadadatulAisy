@@ -17,3 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.callTestCase(findTestCase('TC_Login/Block_TC Success_Login'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.click(findTestObject('TC_Buy Product/card_Samsung galaxy s6'))
+
+product_title = WebUI.getText(findTestObject('TC_Buy Product/title_Detail page (Samsung galaxy s6)'))
+
+WebUI.click(findTestObject('TC_Buy Product/title_Detail page (Samsung galaxy s6)'))
+
+WebUI.click(findTestObject('TC_Buy Product/button_Add to cart'))
+
+WebUI.click(findTestObject('TC_Buy Product/menu_Cart'))
+
+WebUI.waitForElementPresent(findTestObject('TC_Buy Product/card_Cart (samsung galaxy s6)'), 5)
+
+WebUI.verifyElementText(findTestObject('TC_Buy Product/card_Cart (samsung galaxy s6)'), product_title)
+
+WebUI.closeBrowser()
+
