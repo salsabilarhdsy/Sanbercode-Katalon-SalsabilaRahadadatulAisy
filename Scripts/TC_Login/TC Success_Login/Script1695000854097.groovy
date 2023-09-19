@@ -17,3 +17,21 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser(GlobalVariable.web_url)
+
+WebUI.setViewPortSize(GlobalVariable.width, GlobalVariable.height)
+
+WebUI.click(findTestObject('TC_Login/menu_Log in'))
+
+WebUI.setText(findTestObject('TC_Login/input_Username'), 'salsabilasy')
+
+WebUI.setEncryptedText(findTestObject('TC_Login/input_Password'), 'RigbBhfdqOBGNlJIWM1ClA==')
+
+WebUI.click(findTestObject('TC_Login/button_Log in'))
+
+WebUI.waitForElementPresent(findTestObject('TC_Login/verify_Welcome salsabilasy'), 5)
+
+WebUI.verifyElementText(findTestObject('TC_Login/verify_Welcome salsabilasy'), 'Welcome salsabilasy')
+
+WebUI.closeBrowser()
+
