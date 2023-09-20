@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC Success_Delete Product from Cart</name>
+   <name>TC Success_Delete All Existing Product from Cart</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>b1cb3afd-1911-4c02-84b5-fefb611da995</testCaseGuid>

@@ -17,25 +17,19 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-for (int i = 1; i <= 2; i++) {
-    WebUI.openBrowser(GlobalVariable.web_url)
+WebUI.callTestCase(findTestCase('TC_Login/Block_TC Success_Login'), [:], FailureHandling.STOP_ON_FAILURE)
 
-    WebUI.setViewPortSize(GlobalVariable.width, GlobalVariable.height)
+WebUI.click(findTestObject('TC_Buy Product/card_Product in Homepage'))
 
-    WebUI.click(findTestObject('TC_Login/menu_Log in'))
+product_title = WebUI.getText(findTestObject('TC_Buy Product/title_Product in detail page'))
 
-    WebUI.setText(findTestObject('TC_Login/input_Username'), findTestData('Failed Login').getValue(1, i))
+WebUI.click(findTestObject('TC_Buy Product/title_Product in detail page'))
 
-    WebUI.setText(findTestObject('TC_Login/input_Password'), findTestData('Failed Login').getValue(2, i))
+WebUI.click(findTestObject('TC_Buy Product/button_Add to cart'))
 
-    WebUI.click(findTestObject('TC_Login/button_Log in'))
+WebUI.click(findTestObject('TC_Buy Product/menu_Cart'))
 
-    WebUI.waitForAlert(10)
+WebUI.waitForElementPresent(findTestObject('TC_Buy Product/card_Product in Cart'), 10)
 
-    alert_login = WebUI.getAlertText(FailureHandling.STOP_ON_FAILURE)
-
-    WebUI.verifyEqual(alert_login, findTestData('Failed Login').getValue(3, i))
-
-    WebUI.closeBrowser()
-}
+WebUI.verifyElementText(findTestObject('TC_Buy Product/card_Product in Cart'), product_title)
 

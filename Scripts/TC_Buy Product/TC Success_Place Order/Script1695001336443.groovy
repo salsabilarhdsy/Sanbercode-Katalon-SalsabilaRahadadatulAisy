@@ -17,3 +17,29 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+WebUI.callTestCase(findTestCase('TC_Buy Product/Block_TC Success_Add Product to Cart'), [:], FailureHandling.STOP_ON_FAILURE)
+
+WebUI.verifyElementPresent(findTestObject('TC_Buy Product/text_Total payment'), 5)
+
+WebUI.click(findTestObject('TC_Buy Product/button_Place Order'))
+
+WebUI.setText(findTestObject('TC_Buy Product/input_Name'), 'Salsa')
+
+WebUI.setText(findTestObject('TC_Buy Product/input_Country'), 'Indonesia')
+
+WebUI.setText(findTestObject('TC_Buy Product/input_City'), 'Semarang')
+
+WebUI.setText(findTestObject('TC_Buy Product/input_Credit card'), '123498765')
+
+WebUI.setText(findTestObject('TC_Buy Product/input_Month'), '12')
+
+WebUI.setText(findTestObject('TC_Buy Product/input_Year'), '2027')
+
+WebUI.click(findTestObject('TC_Buy Product/button_Purchase'))
+
+WebUI.verifyElementPresent(findTestObject('TC_Buy Product/text_Thank you for your purchase'), 0)
+
+WebUI.click(findTestObject('TC_Buy Product/button_OK'))
+
+WebUI.closeBrowser()
+
