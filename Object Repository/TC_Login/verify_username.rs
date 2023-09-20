@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebElementEntity>
    <description></description>
-   <name>verify_Welcome salsabilasy</name>
+   <name>verify_username</name>
    <tag></tag>
    <elementGuidId>2977cbea-f994-4f52-b3c3-4879828c510f</elementGuidId>
    <imagePath></imagePath>

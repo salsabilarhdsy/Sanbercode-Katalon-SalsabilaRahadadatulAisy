@@ -30,7 +30,7 @@ for (int i = 1; i <= 2; i++) {
 
     WebUI.click(findTestObject('TC_Login/button_Log in'))
 
-    WebUI.waitForAlert(10)
+    WebUI.waitForAlert(5)
 
     alert_login = WebUI.getAlertText(FailureHandling.STOP_ON_FAILURE)
 

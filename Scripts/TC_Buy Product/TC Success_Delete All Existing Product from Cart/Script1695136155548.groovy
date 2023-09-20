@@ -24,10 +24,14 @@ WebUI.click(findTestObject('TC_Buy Product/menu_Cart'))
 int n = 1
 
 for (int i = 1; i <= n; i++) {
-    WebUI.waitForPageLoad(10)
+    WebUI.delay(3)
+
     if (WebUI.verifyElementPresent(findTestObject('TC_Buy Product/card_Product in Cart'), 5, FailureHandling.OPTIONAL)) {
         WebUI.click(findTestObject('TC_Buy Product/button_Delete'))
+
         n += 1
+
+        WebUI.delay(3)
     } else {
         WebUI.closeBrowser()
     }
