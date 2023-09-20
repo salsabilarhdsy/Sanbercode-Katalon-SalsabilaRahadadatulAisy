@@ -4,6 +4,7 @@
    <name>verify_Welcome salsabilasy</name>
    <tag></tag>
    <elementGuidId>2977cbea-f994-4f52-b3c3-4879828c510f</elementGuidId>
+   <imagePath></imagePath>
    <selectorCollection>
       <entry>
          <key>XPATH</key>
@@ -17,8 +18,12 @@
          <key>CSS</key>
          <value>#nameofuser</value>
       </entry>
+      <entry>
+         <key>IMAGE</key>
+         <value></value>
+      </entry>
    </selectorCollection>
-   <selectorMethod>BASIC</selectorMethod>
+   <selectorMethod>CSS</selectorMethod>
    <useRalativeImagePath>true</useRalativeImagePath>
    <webElementProperties>
       <isSelected>false</isSelected>
